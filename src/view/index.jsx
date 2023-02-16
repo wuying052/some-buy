@@ -1,3 +1,5 @@
+import './index.css'
+import { Routes, Route, useNavigate } from "react-router-dom";
 import MyCarousel from '../component/Carousel/index.tsx'
 import airpods from '../assets/airpods.png'
 import iphone from '../assets/iphone.png'
@@ -9,8 +11,19 @@ const HomePage = ()=>{
     { title: 'Tablet',desc:'Just the right amount of everything.',prices:'',style:{color:'black'}, url: `url(${tablet})` }, 
     { title: 'Buy a Tablet or xPhone for college.Get arPods.',desc:'',prices:'',style:{color:'black'}, url: `url(${airpods})` }
   ]
+  const navigat = useNavigate()
+  const goto = ()=>{
+    navigat('other')
+  }
   return (
-    <MyCarousel arr={arr1} />
+    <div className='home'>
+      <div className='item'>
+        <div>
+          <a onClick={goto}>MyCarousel 组件</a>
+        </div>
+        <MyCarousel arr={arr1} />
+      </div>
+    </div>
   )
 }
 export default HomePage
