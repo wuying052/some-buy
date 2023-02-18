@@ -1,0 +1,17 @@
+.home{
+  padding: 50px; 
+}
+.carousel{
+  height: 300px;
+  width: 300px;
+}
+.flex-page{
+  display: flex;
+  padding: 50px; 
+  .page-left{
+    width: 300px;   
+  }
+  .page-right{
+    flex: 1;
+  } 
+}
