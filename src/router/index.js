@@ -1,5 +1,6 @@
 import HomePage from "../view"
 import other from "../view/other"
+import animal from "../component/animal"
 
 const routers = [
   {
@@ -11,6 +12,11 @@ const routers = [
     name:'other',
     path:'other',
     components: other
+  },
+  {
+    name:'animal',
+    path:'animation',
+    components: animal
   },
 ]
 

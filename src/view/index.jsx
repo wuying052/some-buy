@@ -12,6 +12,9 @@ const HomePage = ()=>{
       <div className='item'>
         <a onClick={goto}>组件</a>
       </div>
+      <div className='item'>
+        <a onClick={()=>navigat('animation')}>动画</a>
+      </div>
     </div>
   )
 }
