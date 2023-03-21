@@ -1,0 +1,7 @@
+/* 重置样式 */
+body{
+  margin: 0;
+}
+ul,li{
+  list-style: none;
+}

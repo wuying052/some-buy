@@ -1,5 +1,19 @@
+.menu{
+  float: right;
+  padding-right: 20px;
+}
 .home{
   padding: 50px; 
+  .content{
+    display: flex;
+  }
+  .item{
+    padding: 13px 18px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 4px;
+  }
 }
 .carousel{
   height: 300px;

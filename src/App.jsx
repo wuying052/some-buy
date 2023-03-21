@@ -1,10 +1,20 @@
 import './App.css'
+import './style/common.scss'
+import './style/styles.scss'
 import routers from './router';    // 路由文件
-import { Routes, Link, Route } from 'react-router-dom';    // 路由插件
+import { Routes, Link, Route,useNavigate } from 'react-router-dom';    // 路由插件
+import FontAwesome from 'react-fontawesome';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App dark-mode'>
+      <ul className='menu'>
+        <li>
+          <FontAwesome
+            name='toggle-off'
+          />
+        </li>
+      </ul>
       <Routes>
         {
           routers.map((item, index) => (

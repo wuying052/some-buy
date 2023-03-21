@@ -1,19 +1,21 @@
-import './common.scss'
-import { useNavigate } from "react-router-dom";
+import { useState, useNavigate } from "react-router-dom";
+import home from '../libs/home.js'
 
 const HomePage = ()=>{
- 
   const navigat = useNavigate()
-  const goto = ()=>{
-    navigat('other')
+  const goto = (url)=>{
+    navigat(url)
   }
   return (
     <div className='home'>
-      <div className='item'>
-        <a onClick={goto}>组件</a>
-      </div>
-      <div className='item'>
-        <a onClick={()=>navigat('animation')}>动画</a>
+      <div className="content">
+        {
+          home.map((i,index)=>(
+            <div className='item' key={index}>
+              <a onClick={goto(i.url)}>{i.name}</a>
+            </div>
+          ))
+        }
       </div>
     </div>
   )
