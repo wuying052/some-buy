@@ -1,4 +1,5 @@
-import { useState, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import DebounceDemo from '../component/debounce'
 import home from '../libs/home.js'
 
 const HomePage = ()=>{
@@ -12,10 +13,11 @@ const HomePage = ()=>{
         {
           home.map((i,index)=>(
             <div className='item' key={index}>
-              <a onClick={goto(i.url)}>{i.name}</a>
+              <a onClick={()=> goto(i.url)}>{i.name}</a>
             </div>
           ))
         }
+        <DebounceDemo />
       </div>
     </div>
   )
