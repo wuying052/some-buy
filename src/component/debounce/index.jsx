@@ -1,15 +1,17 @@
 import { useState } from "react";
 
 const DebounceDemo = ()=>{
-  const [search,setSearch] = useState('请输入')
+  const [search,setSearch] = useState('')
   let timer = null 
 
   //防抖
-  const ondebounce = ()=>{
+  const ondebounce = (event)=>{    
     if(timer) clearTimeout(timer)
+
+    const val = event.target.value
     timer = setTimeout(() => {
-      setSearch(search)
-    }, 1000);
+      setSearch(val)
+    }, 500);
   }
   //节流
   const onthrottle = ()=>{
