@@ -1,13 +1,23 @@
 .menu{
   float: right;
   padding-right: 20px;
+  display: flex;
+  li a{
+    color: #fff;
+    margin-right: 10px;
+  }
 }
 .home{
   padding: 50px; 
   .content{
-    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    display: inline-flex;
+    flex-direction: column;
   }
   .item{
+    width: 80px;
     padding: 13px 18px;
     margin: 10px;
     border-radius: 4px;
@@ -15,6 +25,12 @@
     box-shadow: 4px;
   }
 }
+// 排序
+.chart{
+  width: 500px;
+  height: 500px;
+}
+// 轮播组件
 .carousel{
   height: 300px;
   width: 300px;
@@ -30,6 +46,7 @@
     margin-left: 15px;
   } 
 }
+
 // 动画效果demo
 .ani {
   width: 480px;

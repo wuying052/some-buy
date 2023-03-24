@@ -10,6 +10,9 @@ function App() {
     <div className='App dark-mode'>
       <ul className='menu'>
         <li>
+          <Link to="/" >首页</Link>
+        </li>
+        <li>
           <FontAwesome
             name='toggle-off'
           />
