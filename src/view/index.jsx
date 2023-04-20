@@ -10,7 +10,7 @@ const HomePage = ()=>{
   }
   return (
     <div className='home'>
-      <div className="content">
+      <div className="right-content">
         {
           home.map((i,index)=>(
             <div className='item' key={index}>

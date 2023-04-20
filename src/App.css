@@ -1,3 +1,10 @@
+.App{
+  /* 防止与子页面外边距重叠 */
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+  /* border: 1px solid; */
+}
 /* 重置样式 */
 body{
   margin: 0;
