@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import DebounceDemo from '../component/debounce'
 import SortChart from '../component/sort-chart'
+import MyCanvas from '../component/animal/canvas'
 import home from '../libs/home.js'
 
 const HomePage = ()=>{
@@ -21,6 +22,7 @@ const HomePage = ()=>{
       </div>
       <DebounceDemo />
       <SortChart />
+      <MyCanvas />
     </div>
   )
 }
