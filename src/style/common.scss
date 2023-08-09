@@ -1,21 +1,68 @@
-.menu{
-  float: right;
-  padding-right: 20px;
+// :required('./styles.scss')
+
+.mode-style{
+  mix-blend-mode: difference;
+  color: var(--font-color);
+}
+
+.header {
+  @extend .mode-style;
   display: flex;
-  li a{
-    color: #fff;
-    margin-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 17px;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .name {
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 8px;
+  }
+
+  .slogon {
+    color: #9f9898;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 5px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu {
+    padding-right: 20px;
+    display: flex;
+
+    li a {
+      @extend .mode-style;
+      margin-right: 10px;
+    }
   }
 }
+
+/** 主页面 **/
+.page {
+  @extend .mode-style;
+  padding: 50px 20px;
+}
+
 .home{
-  padding: 50px; 
-  .right-content{
+  padding: 50px;
+
+  .right-content {
     position: absolute;
     right: 10px;
     top: 100px;
     display: inline-flex;
     flex-direction: column;
   }
+
   .item{
     width: 80px;
     padding: 13px 18px;
@@ -25,26 +72,31 @@
     box-shadow: 4px;
   }
 }
+
 // 排序
 .chart{
   width: 500px;
   height: 500px;
 }
+
 // 轮播组件
 .carousel{
   height: 300px;
   width: 300px;
 }
+
 .flex-page{
   display: flex;
-  padding: 50px; 
+
+  // padding: 50px; 
   .page-left{
-    width: 300px;   
+    width: 300px;
   }
+
   .page-right{
     flex: 1;
     margin-left: 15px;
-  } 
+  }
 }
 
 // 动画效果demo
@@ -79,4 +131,4 @@
   }
 }
 
-
+$my-font-style:#fff;

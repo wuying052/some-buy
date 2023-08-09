@@ -18,3 +18,8 @@ button{
   height: 24px;
   padding: 2px;  
 }
+
+/* 全局样式 */
+:root{
+ --font-color: bisque;
+}
