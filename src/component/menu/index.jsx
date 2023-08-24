@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 
 const Menu = (arr) => {
   const list = [
-    { name: '首页', url: '/' }, 
-    { name: '书籍', url: '/book' }, 
-    { name: '算法', url: '/sort' }, 
+    { name: '首页', url: '/' },
+    { name: '书籍', url: '/book' },
+    { name: '算法', url: '/sort' },
     { name: '动画', url: '/canvas' }
   ]
   const [mode, setMode] = useState('')
@@ -39,15 +39,14 @@ const Menu = (arr) => {
             </li>
           ))
         }
-
-        <li>
-          {/* <i data-feather="circle"></i> */}
-          <FontAwesome
-            name={mode === 'dark' ? 'toggle-off' : 'toggle-on'}
-            onClick={changMode}
-          />
-        </li>
       </ul>
+      <div>
+        {/* <i data-feather="circle"></i> */}
+        <FontAwesome
+          name={mode === 'dark' ? 'toggle-off' : 'toggle-on'}
+          onClick={changMode}
+        />
+      </div>
     </div>
   )
 }

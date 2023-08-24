@@ -7,5 +7,13 @@
 //浅色模式
 .light-mode{
   height: 100vh;
-  background: #fff;
+  // background: #fefefe;
+}
+
+//页首
+.light-mode .header{
+  background: #9f9898
+}
+.dark-mode .header{
+  background: #1e2749
 }
