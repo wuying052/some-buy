@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const axiosRequest = (type, url) => {
-  return axios.create({
-    baseURL: 'http://localhost:5001/' + url,
+const axiosRequest = axios.create({
+    baseURL: 'http://localhost:5001/',
     // baseURL: "http://192.168.7.127:8080",
-    method: type,
+    method: 'post',
     timeout: 40000,
     headers: {
       // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -14,44 +13,44 @@ const axiosRequest = (type, url) => {
       // withCredentials: true
     },
   });
-}
+
 
 /**查询书籍列表
  * 
  */
 export const getBookList = () => {
-  return axiosRequest(
-    'get',
-    'api/booklist'
-  )
+  return axiosRequest({
+    method:'get',
+    url:'api/booklist'
+  })
 }
 
 /**新增书籍
  * 
  */
 export const addBook = () => {
-  return axiosRequest(
-    'get',
-    'api/bookadd'
-  )
+  return axiosRequest({
+    method:'get',
+    url:'api/bookadd'
+  })
 }
 
 /**删除书籍
  * 
  */
 export const removeBook = () => {
-  return axiosRequest(
-    'get',
-    'api/bookdel'
-  )
+  return axiosRequest({
+    method:'get',
+    url:'api/bookdel'
+  })
 }
 
 /**查询书籍详情
  * 
  */
 export const getBookDetail = () => {
-  return axiosRequest(
-    'get',
-    'api/bookdetail'
-  )
+  return axiosRequest({
+    method:'get',
+    url:'api/bookdetail'
+  })
 }
