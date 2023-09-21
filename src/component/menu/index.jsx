@@ -1,7 +1,8 @@
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';    // 路由插件
 import FontAwesome from 'react-fontawesome';
 
-import useLocalStorage from '../../libs/useLocalStorage';
+import { GlobalContext } from '../../state/globalContext';
 
 const Menu = (arr) => {
   const list = [
@@ -11,11 +12,11 @@ const Menu = (arr) => {
     { name: '动画', url: '/canvas' }
   ]
 
-  const { mode, updateMode } = useLocalStorage('mode', 'dark')
+  const { globalData, updateGlobalData } = useContext(GlobalContext);
   
   const changMode = () => {
-    const newMode = mode === 'dark' ? 'light' : 'dark'
-    updateMode(newMode)
+    const newMode = globalData.mode === 'dark' ? 'light' : 'dark'
+    updateGlobalData({ mode: newMode })
   }
 
   return (
@@ -39,7 +40,7 @@ const Menu = (arr) => {
       <div>
         {/* <i data-feather="circle"></i> */}
         <FontAwesome
-          name={mode === 'dark' ? 'toggle-off' : 'toggle-on'}
+          name={globalData.mode === 'dark' ? 'toggle-off' : 'toggle-on'}
           onClick={changMode}
         />
       </div>
