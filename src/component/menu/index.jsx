@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';    // 路由插件
 import FontAwesome from 'react-fontawesome';
-import { useState, useEffect } from 'react';
+
+import useLocalStorage from '../../libs/useLocalStorage';
 
 const Menu = (arr) => {
   const list = [
@@ -9,18 +10,13 @@ const Menu = (arr) => {
     { name: '算法', url: '/sort' },
     { name: '动画', url: '/canvas' }
   ]
-  const [mode, setMode] = useState('')
 
+  const { mode, updateMode } = useLocalStorage('mode', 'dark')
+  
   const changMode = () => {
-    const val = mode === 'dark' ? 'light' : 'dark'
-    localStorage.setItem('mode', val)
-    setMode(val)
-    window.location.reload()
+    const newMode = mode === 'dark' ? 'light' : 'dark'
+    updateMode(newMode)
   }
-
-  useEffect(() => {
-    setMode(localStorage.getItem('mode'))
-  })
 
   return (
     <div className='header'>
