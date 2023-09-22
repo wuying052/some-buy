@@ -1,19 +1,4 @@
-import axios from "axios";
-
-const axiosRequest = axios.create({
-    baseURL: 'http://localhost:5001/',
-    // baseURL: "http://192.168.7.127:8080",
-    method: 'post',
-    timeout: 40000,
-    headers: {
-      // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-      "Content-Type": "application/json",
-      // 'Access-Control-Allow-Origin': '*',
-      // "access-control-allow-credentials":'true',
-      // withCredentials: true
-    },
-  });
-
+import axiosRequest from "./axiosRequest"
 
 /**查询书籍列表
  * 
@@ -21,17 +6,18 @@ const axiosRequest = axios.create({
 export const getBookList = () => {
   return axiosRequest({
     method:'get',
-    url:'api/booklist'
+    url:'api/book/list'
   })
 }
 
 /**新增书籍
  * 
  */
-export const addBook = () => {
+export const addBook = (data) => {
   return axiosRequest({
-    method:'get',
-    url:'api/bookadd'
+    method:'post',
+    url:'api/book/add',
+    data
   })
 }
 
@@ -41,7 +27,7 @@ export const addBook = () => {
 export const removeBook = () => {
   return axiosRequest({
     method:'get',
-    url:'api/bookdel'
+    url:'api/book/remove'
   })
 }
 
@@ -51,6 +37,6 @@ export const removeBook = () => {
 export const getBookDetail = () => {
   return axiosRequest({
     method:'get',
-    url:'api/bookdetail'
+    url:'api/book/detail'
   })
 }
