@@ -1,1 +1,10 @@
+.gitignore
 node_modules
+npminstall-debug.log
+系统设计.docx
+yarn.lock
+service/package-lock.json
+src/index.js
+src/server/book ajax.js
+src/view/book/demo.js
+package-lock.json
