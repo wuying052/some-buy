@@ -3,7 +3,7 @@
 
 技术：react18
 
-文档：http://t.csdn.cn/EclI0
+文档：
 
 功能：（扩展中）
 
