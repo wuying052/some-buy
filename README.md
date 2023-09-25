@@ -1,4 +1,7 @@
-# w-world
+# 安装
+包依赖可能会安装失败，执行：cnpm install node-sass sass-loader --save-dev
+# some-buy
+
 个人demo
 
 技术：react18
@@ -17,4 +20,3 @@
 |  ├─styles.css   个性化样式
 |
 
-- ###### carousel-轮播图
