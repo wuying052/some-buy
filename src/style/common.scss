@@ -9,6 +9,43 @@
   border-color: inherit;
 }
 
+//登录页
+.bgImage{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/bg.png");
+  background-size: 100% 100%;
+
+  .loginForm{
+    position: relative;
+    left: calc(50% - 150px);
+    top: calc(50% - 200px);
+    width: 300px;
+    height: auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    opacity: 0.5;
+    text-align: center;
+  }
+  input{
+    margin-bottom: 8px;
+  }
+  button{
+    width: 180px;
+    color: #fff;
+    background-color: rgb(31, 82, 133);
+    margin-top: 13px;
+  }
+  a{
+    float: right;
+    margin-right: 60px;
+    margin-top: 5px;
+    font-size: 10px;
+    // text-decoration: none;
+  }
+}
+
 .header {
   @extend .mode-style;
   @extend .border-style;
@@ -50,6 +87,18 @@
       margin-right: 30px;
       font-size: 20px;
       text-decoration: none;
+      cursor: pointer;
+    }
+    li .menu{
+      flex-direction: column;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #666;
+      padding-left: 20px;
+      li:not(:last-child){
+        @extend .mode-style;
+        border-bottom: 1px solid #999;
+      }
     }
   }
 }
@@ -58,6 +107,9 @@
 .page {
   @extend .mode-style;
   padding: 50px 20px;
+  .login{
+    padding: 0;
+  }
 }
 
 .home {

@@ -11,10 +11,13 @@ import { GlobalContext } from './state/globalContext';
 
 function App() {
   const { globalData } = useContext(GlobalContext);
+  const pathname = window.location.pathname
   return (
     <div className={['App '+globalData.mode + '-mode']}>
-      <Menu />
-      <div className='page'>
+      {
+        pathname!=='/login' && <Menu/>
+      }
+      <div className={'page'+ pathname==='/login'?'login':''}>
         <Routes>
           {
             routers.map((item, index) => (
