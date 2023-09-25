@@ -1,4 +1,5 @@
 import HomePage from "../view"
+import loginPage from "../view/login/login"
 import BookPage from "../view/book"
 import BookDetail from "../view/book/detail"
 import other from "../view/other"
@@ -8,6 +9,12 @@ import MyCanvas from '../component/animal/canvas'
 
 
 const routers = [
+  {
+    name:'login',
+    path:'/login',
+    nohead:'true',
+    components: loginPage
+  },
   {
     name:'home',
     path:'/',
@@ -42,6 +49,11 @@ const routers = [
     name:'canvas',
     path:'canvas',
     components: MyCanvas
+  },
+  {
+    name:'css',
+    path:'css',
+    // components: MyCanvass
   },
 ]
 
